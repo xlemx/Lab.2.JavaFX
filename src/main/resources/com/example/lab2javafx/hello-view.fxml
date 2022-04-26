@@ -4,13 +4,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2javafx.HelloController">
-   <children>
-      <Button fx:id="btnMain" layoutX="159.0" layoutY="86.0" mnemonicParsing="false" onAction="#onBtnAction" prefHeight="25.0" prefWidth="107.0" text="Kliknij mnie !" textAlignment="RIGHT" textFill="#7c1c8d">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Button>
-      <TextField fx:id="txtLicznik" layoutX="138.0" layoutY="140.0" onAction="#txtLicznik" />
-   </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab2javafx.HelloController">
+   <Label graphicTextGap="5.0" layoutX="55.0" layoutY="30.0" prefHeight="54.0" prefWidth="511.0" text="PROGRAM DO OBLICZANIA MASY WALCA I KOSZTÓW BLACHY" textAlignment="CENTER" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="30.0">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Label>
+   <Label layoutX="96.0" layoutY="109.0" prefHeight="19.0" prefWidth="208.0" text="WPROWADŹ WARTOŚCI:">
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+   </Label>
+   <Label layoutX="64.0" layoutY="157.0" prefHeight="17.0" prefWidth="135.0" text="PROMIEŃ WALCA (mm):" />
+   <Label layoutX="56.0" layoutY="192.0" prefHeight="17.0" prefWidth="149.0" text="WYSOKOŚĆ WALCA (mm):" />
+   <Label layoutX="58.0" layoutY="223.0" prefHeight="17.0" prefWidth="141.0" text="GRUBOŚĆ BLACHY (mm):" />
+   <Spinner fx:id="cylinderRadius" editable="true" layoutX="226.0" layoutY="153.0" />
+   <Spinner fx:id="cylinderHeight" editable="true" layoutX="226.0" layoutY="188.0" />
+   <Spinner fx:id="cylinderGauge" editable="true" layoutX="226.0" layoutY="219.0" />
+
+   <Button fx:id="calculate" layoutX="246.0" layoutY="265.0" mnemonicParsing="false" onAction="#btmCalculate" prefHeight="25.0" prefWidth="109.0" text="OBLICZ">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Button>
+   <TextField fx:id="steelMass" layoutX="131.0" layoutY="356.0" />
+   <TextField fx:id="steelPrice" layoutX="131.0" layoutY="397.0" />
+   <TextField fx:id="copperMass" layoutX="355.0" layoutY="356.0" />
+   <TextField fx:id="copperPrice" layoutX="355.0" layoutY="397.0" />
+   <Label layoutX="52.0" layoutY="360.0" prefHeight="17.0" prefWidth="68.0" text="MASA" />
+   <Label layoutX="55.0" layoutY="401.0" text="CENA" />
+   <Label layoutX="155.0" layoutY="324.0" text="BLACHA STALOWA" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label layoutX="374.0" layoutY="324.0" text="BLACHA MIEDZIANA">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+
 </AnchorPane>
